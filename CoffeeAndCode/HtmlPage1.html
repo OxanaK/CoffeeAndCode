@@ -1,0 +1,838 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        body {
+            background: url(https://i1.rozetka.ua/goods/2649807/30879519_images_2649807943.jpg);
+            background-attachment: fixed;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            color: #4D2C18;
+        }
+
+        #header-img {
+            max-height: 80px;
+            left: 0;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 50%;
+            display: inline;
+        }
+
+        li a {
+            float: left;
+        }
+
+        #nav li {
+            align-items: center;
+        }
+
+            #nav li a:hover {
+                background-color: #6e3607;
+                color: white;
+                box-shadow: 0 0 5px #6e3607;
+            }
+
+        .icon {
+            float: left;
+        }
+
+
+        #header {
+            margin: 0;
+            padding: 0;
+            left: 0;
+            position: fixed;
+            display: inline-block;
+            top: 0;
+            height: 100px;
+            z-index: 5;
+            background-color: white;
+            width: 100%;
+        }
+
+        .imgRecipe img {
+            width: auto;
+            max-width: 100%;
+        }
+
+        .imgRecipe {
+            overflow: hidden;
+            width: auto;
+            background-size: cover;
+            text-align: center;
+        }
+
+        .block_right {
+            display: inline-block;
+            width: 20%;
+            padding-right: 2%;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        #logo_name {
+            max-width: 200px;
+            margin-left: 90px;
+            position: absolute;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            font-weight: 500;
+            font-size: 3em;
+            padding-top: 21px;
+        }
+
+        #nav {
+            width: 60%;
+            float: right;
+        }
+
+        .text_logo_menu {
+            margin-top: 2px;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+
+
+        .desc {
+            float: right;
+            width: 60%;
+            font-weight: bold;
+        }
+
+        a.nav-link {
+            color: #363212;
+            text-decoration: none;
+            padding-left: 3%;
+            padding-right: 3%;
+            font-weight: bold;
+        }
+
+        iframe {
+            max-width: 560px;
+            width: 100%;
+            box-shadow: 5px 5px 10px #6e3607;
+        }
+
+        .recipe {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            align-items: stretch;
+            width: calc(92% / 3);
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #recipes {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        .recipeName {
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            font-weight: bold;
+            width: 100%;
+            font-size: 2.5em;
+            height: 70px;
+            border: 1px solid #000;
+            border-radius: 3px;
+            color: #6e3607;
+        }
+
+
+
+        .rec {
+            background: white;
+            margin-bottom: 9px;
+            border: 1px solid #000;
+            border-radius: 3px;
+            height: auto;
+            box-shadow: 5px 5px 10px #6e3607;
+        }
+
+
+        h3 {
+            text-decoration: underline;
+            margin: 7px;
+        }
+
+        .mgRecipe {
+            height: 100%;
+            display: block;
+        }
+
+        .discription {
+            background: white;
+            height: 100%;
+            display: block;
+            font-size: 1.2em;
+            padding: 20px;
+            position: relative;
+            border: 1px solid #000;
+            border-radius: 3px;
+        }
+
+
+
+            .discription h2 {
+                padding-bottom: 15px;
+            }
+
+        #share {
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        #recipes ul li {
+            margin: 7px;
+            list-style-type: none;
+        }
+
+            #recipes ul li:before {
+                color: #6e3607;
+                content: "\2756";
+                padding-right: 10px;
+            }
+
+        .desc p {
+            font-size: 1.4em;
+            font-weight: normal;
+            text-align: start;
+            padding-top: 15px;
+            width: auto;
+        }
+
+        .desc h2 {
+            text-align: start;
+            font-size: 2em;
+            color: #6e3607;
+        }
+
+
+        .icon {
+            left: 0;
+        }
+
+        .desc {
+            width: 80%;
+            padding-bottom: 20px;
+        }
+
+
+
+        .recip_h2 {
+            width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 2.2em;
+            padding-bottom: 30px;
+            padding-top: 150px;
+        }
+
+        #why,
+        #how {
+            width: 80%;
+            display: block;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .twoClomms {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            box-shadow: 5px 5px 7px #6e3607;
+        }
+
+        .btn {
+            position: relative;
+            bottom: 28px;
+            width: 160px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #email {
+            width: 25%;
+            height: 30px;
+            margin-top: 15px;
+        }
+
+        #submit {
+            display: block;
+            margin-top: 15px;
+            bottom: 0px;
+            width: 130px;
+            height: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        ol {
+            padding: 7px;
+        }
+
+        div.twoClomms {
+            background-color: white;
+            padding: 25px;
+            border: 1px solid white;
+            margin: 20px;
+            box-shadow: 5px 5px 10px #6e3607;
+            overflow: hidden;
+        }
+
+        #how,
+        #why,
+        #recipes {
+            padding: 50px;
+            box-shadow: 5px 5px 10px #6e3607;
+            width: 90%;
+            overflow: hidden;
+        }
+
+        #conteiner {
+            display: block;
+            overflow: hidden;
+            flex-wrap: wrap;
+            clear: both;
+        }
+
+        footer {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            height: auto;
+            background-color: #6e3607;
+            color: white;
+        }
+
+
+        .footerDiv {
+            margin: 10px;
+            font-weight: bold;
+            float: right;
+            height: auto;
+            color: white;
+        }
+
+            .footerDiv a {
+                color: white;
+                text-decoration: none;
+            }
+
+        #copyright {
+            float: right;
+            overflow: hidden;
+            clear: both;
+            margin-right: 10px;
+            color: white;
+            padding-bottom: 10px;
+        }
+
+        @media screen and (min-width: 984px) {
+            header {
+                border-bottom: 1px solid #4D2C18;
+            }
+
+            #nav {
+                width: 45%;
+                margin-left: 20px;
+            }
+
+            .text_logo_menu {
+                margin-top: 25px;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 983px) {
+            .text_logo_menu {
+                font-size: 1.5em;
+            }
+
+            #nav {
+                width: 50%;
+            }
+
+            ul#nav {
+                padding: 0;
+                margin: 0;
+                display: inline-block;
+                width: 35%;
+                background-color: white;
+            }
+
+            #nav li a {
+                display: block;
+                padding: 2px;
+                text-decoration: none;
+                width: 100%;
+                text-decoration: underline;
+            }
+
+            #nav li:nth-child(3) a {
+                border-bottom: none;
+            }
+
+            .text_logo_menu {
+                margin-top: 2px;
+            }
+
+            a.nav-link {
+                font-size: 1em;
+            }
+
+            header {
+                border-bottom: 1px solid #4D2C18;
+            }
+
+            .recipe {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                align-items: stretch;
+                width: calc(92% / 2);
+                height: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #recipes {
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: stretch;
+                margin-left: auto;
+                margin-right: auto;
+                overflow: hidden;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            ul#nav {
+                padding: 0;
+                margin: 0;
+                margin-top: 100px;
+                display: block;
+                width: 100%;
+                background-color: white;
+            }
+
+            #email {
+                width: 70%;
+            }
+
+            .icon {
+                display: none;
+            }
+
+            #main {
+                margin-top: 200px;
+            }
+
+            #nav li a {
+                display: block;
+                padding: 7px;
+                text-decoration: none;
+                width: 100%;
+                border-bottom: 1px solid #4D2C18;
+            }
+
+            #nav li:nth-child(1) {
+                border-top: 1px solid #4D2C18;
+            }
+
+            #why {
+                width: 90%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #how {
+                width: 90%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .recipe {
+                width: 90%;
+                display: block;
+            }
+
+            #recipes {
+                width: 90%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            div.twoClomms {
+                width: 100%;
+                display: block;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            #moveToHow {
+                width: 100%;
+                display: block;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .text_logo_menu {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div>
+
+            <img id="header-img" src="https://calendarmedia.blob.core.windows.net/assets/3867334a-8bcc-4f44-9684-3fe63020ec24.png" alt="original_logo" />
+            <div style="max-width:250px" id="logo_name">Coffee&&Code</div>
+
+        </div>
+        <nav id="nav-bar">
+            <ul id="nav">
+                <li class="text_logo_menu"><a class="nav-link" href="#moveToWhy">Facts</a></li>
+                <li class="text_logo_menu"><a class="nav-link" href="#moveToHow">Video</a></li>
+                <li class="text_logo_menu"><a class="nav-link" href="#moveToRecipes">Recipes</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <hr />
+    <main>
+        <div id="conteiner">
+
+            <div id="main">
+
+                <div id="moveToWhy">
+                    <h2 class="recip_h2">Interesting Facts about Coffee</h2>
+                </div>
+                <div id="why">
+                    <div class="twoClomms">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="50" height="50"
+                                 viewBox="0 0 172 172"
+                                 style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#6e3607"><path d="M60.31422,10.32c-26.63248,0 -49.99422,31.24052 -49.99422,66.85828c0,27.55096 14.45499,53.28108 33.82219,62.96812c-6.32616,-18.53472 -1.69345,-42.90717 12.51031,-62.92109c-4.5064,-7.46136 -8.4925,-16.68475 -8.4925,-29.06531c0,-11.2316 7.15165,-22.0906 7.45781,-22.54812c1.05264,-1.57896 3.18791,-2.00326 4.77031,-0.95406c1.57896,1.0492 2.00326,3.18791 0.95406,4.77031c-0.06536,0.09632 -6.30219,9.61244 -6.30219,18.73187c0,9.57696 2.66637,16.91824 6.14765,23.20656c1.54112,-1.8232 3.13782,-3.61485 4.85094,-5.32797c10.58144,-10.58144 23.52197,-18.13176 37.15469,-21.95016c-9.10224,-20.25816 -25.8373,-33.76844 -42.87906,-33.76844zM124.8411,48.20703c-3.56927,-0.1556 -7.29495,0.03983 -11.12625,0.59797c-15.62104,2.26696 -30.82692,10.11301 -42.81188,22.09797c-24.6476,24.65104 -30.37348,62.17058 -12.255,80.28906c6.83184,6.83528 17.02273,10.49469 28.74281,10.49469c2.82768,0 5.75533,-0.21828 8.73437,-0.65172c15.62104,-2.26696 30.8202,-10.11301 42.80516,-22.09797c24.65104,-24.65104 30.3802,-62.17058 12.26172,-80.28906c-6.36228,-6.36228 -15.64313,-9.97412 -26.35094,-10.44094zM141.04,68.86047c1.90232,0 3.44,1.54112 3.44,3.44c0,13.12704 -10.08006,29.56492 -38.3775,36.34172c-30.34768,7.2584 -30.3486,23.61205 -30.3486,32.39781c0,1.89888 -1.53768,3.44 -3.44,3.44c-1.90232,0 -3.44,-1.54112 -3.44,-3.44c0,-9.14696 0.00145,-30.55865 35.62953,-39.08297c24.40336,-5.84456 33.09656,-19.15424 33.09656,-29.65656c0,-1.89888 1.53768,-3.44 3.44,-3.44z"></path></g></g></svg>
+                        </div>
+                        <div class="desc">
+                            <h2>Coffee was discovered by a goat herder </h2>
+                            <p>
+                                It was said that coffee was discovered by a goat herder in Ethiopia in the 1500s.
+                                He saw his goats eating coffee cherries. Afterwards, he observed a change in their behavior.
+                                They gained a high amount of energy and they didn’t sleep at night.
+                                The herder shared his findings with local monks and then after they made a drink with coffee beans,
+                                they realized they could stay up all night and pray.
+                                Then, they spread the word to other Ethiopian monks and it reached across the civilized world.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="twoClomms">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="50" height="50"
+                                 viewBox="0 0 172 172"
+                                 style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#6e3607"><path d="M60.31422,10.32c-26.63248,0 -49.99422,31.24052 -49.99422,66.85828c0,27.55096 14.45499,53.28108 33.82219,62.96812c-6.32616,-18.53472 -1.69345,-42.90717 12.51031,-62.92109c-4.5064,-7.46136 -8.4925,-16.68475 -8.4925,-29.06531c0,-11.2316 7.15165,-22.0906 7.45781,-22.54812c1.05264,-1.57896 3.18791,-2.00326 4.77031,-0.95406c1.57896,1.0492 2.00326,3.18791 0.95406,4.77031c-0.06536,0.09632 -6.30219,9.61244 -6.30219,18.73187c0,9.57696 2.66637,16.91824 6.14765,23.20656c1.54112,-1.8232 3.13782,-3.61485 4.85094,-5.32797c10.58144,-10.58144 23.52197,-18.13176 37.15469,-21.95016c-9.10224,-20.25816 -25.8373,-33.76844 -42.87906,-33.76844zM124.8411,48.20703c-3.56927,-0.1556 -7.29495,0.03983 -11.12625,0.59797c-15.62104,2.26696 -30.82692,10.11301 -42.81188,22.09797c-24.6476,24.65104 -30.37348,62.17058 -12.255,80.28906c6.83184,6.83528 17.02273,10.49469 28.74281,10.49469c2.82768,0 5.75533,-0.21828 8.73437,-0.65172c15.62104,-2.26696 30.8202,-10.11301 42.80516,-22.09797c24.65104,-24.65104 30.3802,-62.17058 12.26172,-80.28906c-6.36228,-6.36228 -15.64313,-9.97412 -26.35094,-10.44094zM141.04,68.86047c1.90232,0 3.44,1.54112 3.44,3.44c0,13.12704 -10.08006,29.56492 -38.3775,36.34172c-30.34768,7.2584 -30.3486,23.61205 -30.3486,32.39781c0,1.89888 -1.53768,3.44 -3.44,3.44c-1.90232,0 -3.44,-1.54112 -3.44,-3.44c0,-9.14696 0.00145,-30.55865 35.62953,-39.08297c24.40336,-5.84456 33.09656,-19.15424 33.09656,-29.65656c0,-1.89888 1.53768,-3.44 3.44,-3.44z"></path></g></g></svg>
+                        </div>
+                        <div class="desc">
+                            <h2> Coffee is a fruit</h2>
+                            <p>
+                                Coffee beans grow on a bush. They are actually the pit of a berry, which makes them a fruit.
+                                There are two main varieties of beans, green and red. Red beans have a
+                                nicer smell and are less acidic. Red beans are used to produce lighter coffees.
+                                The longer that coffee beans have been roasted – the healthier they are.
+                                Decaffeinated coffee comes from a chemical process where the caffeine is taken out of the beans.
+                                The caffeine is then often sold to Coca-Cola.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="twoClomms">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="50" height="50"
+                                 viewBox="0 0 172 172"
+                                 style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#6e3607"><path d="M60.31422,10.32c-26.63248,0 -49.99422,31.24052 -49.99422,66.85828c0,27.55096 14.45499,53.28108 33.82219,62.96812c-6.32616,-18.53472 -1.69345,-42.90717 12.51031,-62.92109c-4.5064,-7.46136 -8.4925,-16.68475 -8.4925,-29.06531c0,-11.2316 7.15165,-22.0906 7.45781,-22.54812c1.05264,-1.57896 3.18791,-2.00326 4.77031,-0.95406c1.57896,1.0492 2.00326,3.18791 0.95406,4.77031c-0.06536,0.09632 -6.30219,9.61244 -6.30219,18.73187c0,9.57696 2.66637,16.91824 6.14765,23.20656c1.54112,-1.8232 3.13782,-3.61485 4.85094,-5.32797c10.58144,-10.58144 23.52197,-18.13176 37.15469,-21.95016c-9.10224,-20.25816 -25.8373,-33.76844 -42.87906,-33.76844zM124.8411,48.20703c-3.56927,-0.1556 -7.29495,0.03983 -11.12625,0.59797c-15.62104,2.26696 -30.82692,10.11301 -42.81188,22.09797c-24.6476,24.65104 -30.37348,62.17058 -12.255,80.28906c6.83184,6.83528 17.02273,10.49469 28.74281,10.49469c2.82768,0 5.75533,-0.21828 8.73437,-0.65172c15.62104,-2.26696 30.8202,-10.11301 42.80516,-22.09797c24.65104,-24.65104 30.3802,-62.17058 12.26172,-80.28906c-6.36228,-6.36228 -15.64313,-9.97412 -26.35094,-10.44094zM141.04,68.86047c1.90232,0 3.44,1.54112 3.44,3.44c0,13.12704 -10.08006,29.56492 -38.3775,36.34172c-30.34768,7.2584 -30.3486,23.61205 -30.3486,32.39781c0,1.89888 -1.53768,3.44 -3.44,3.44c-1.90232,0 -3.44,-1.54112 -3.44,-3.44c0,-9.14696 0.00145,-30.55865 35.62953,-39.08297c24.40336,-5.84456 33.09656,-19.15424 33.09656,-29.65656c0,-1.89888 1.53768,-3.44 3.44,-3.44z"></path></g></g></svg>
+                        </div>
+                        <div class="desc">
+                            <h2> Coffee helped Olympic athletes</h2>
+                            <p>
+                                Brazil couldn’t afford to send its athletes to Los Angeles
+                                for the 1932 Olympics, so the government loaded them in a ship
+                                full of coffee which was sold on the way to finance their trip.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="twoClomms">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="50" height="50"
+                                 viewBox="0 0 172 172"
+                                 style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#6e3607"><path d="M60.31422,10.32c-26.63248,0 -49.99422,31.24052 -49.99422,66.85828c0,27.55096 14.45499,53.28108 33.82219,62.96812c-6.32616,-18.53472 -1.69345,-42.90717 12.51031,-62.92109c-4.5064,-7.46136 -8.4925,-16.68475 -8.4925,-29.06531c0,-11.2316 7.15165,-22.0906 7.45781,-22.54812c1.05264,-1.57896 3.18791,-2.00326 4.77031,-0.95406c1.57896,1.0492 2.00326,3.18791 0.95406,4.77031c-0.06536,0.09632 -6.30219,9.61244 -6.30219,18.73187c0,9.57696 2.66637,16.91824 6.14765,23.20656c1.54112,-1.8232 3.13782,-3.61485 4.85094,-5.32797c10.58144,-10.58144 23.52197,-18.13176 37.15469,-21.95016c-9.10224,-20.25816 -25.8373,-33.76844 -42.87906,-33.76844zM124.8411,48.20703c-3.56927,-0.1556 -7.29495,0.03983 -11.12625,0.59797c-15.62104,2.26696 -30.82692,10.11301 -42.81188,22.09797c-24.6476,24.65104 -30.37348,62.17058 -12.255,80.28906c6.83184,6.83528 17.02273,10.49469 28.74281,10.49469c2.82768,0 5.75533,-0.21828 8.73437,-0.65172c15.62104,-2.26696 30.8202,-10.11301 42.80516,-22.09797c24.65104,-24.65104 30.3802,-62.17058 12.26172,-80.28906c-6.36228,-6.36228 -15.64313,-9.97412 -26.35094,-10.44094zM141.04,68.86047c1.90232,0 3.44,1.54112 3.44,3.44c0,13.12704 -10.08006,29.56492 -38.3775,36.34172c-30.34768,7.2584 -30.3486,23.61205 -30.3486,32.39781c0,1.89888 -1.53768,3.44 -3.44,3.44c-1.90232,0 -3.44,-1.54112 -3.44,-3.44c0,-9.14696 0.00145,-30.55865 35.62953,-39.08297c24.40336,-5.84456 33.09656,-19.15424 33.09656,-29.65656c0,-1.89888 1.53768,-3.44 3.44,-3.44z"></path></g></g></svg>
+                        </div>
+                        <div class="desc">
+                            <h2> A year drinking coffee or an iPhone 11?</h2>
+                            <p>
+                                An American spends on average $1,092 a year on coffee. That’s around $20 a week.
+                                That is also close to the price of the newest iPhone.
+                                Young people generally spend more on coffee than older people.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="twoClomms">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="50" height="50"
+                                 viewBox="0 0 172 172"
+                                 style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#6e3607"><path d="M60.31422,10.32c-26.63248,0 -49.99422,31.24052 -49.99422,66.85828c0,27.55096 14.45499,53.28108 33.82219,62.96812c-6.32616,-18.53472 -1.69345,-42.90717 12.51031,-62.92109c-4.5064,-7.46136 -8.4925,-16.68475 -8.4925,-29.06531c0,-11.2316 7.15165,-22.0906 7.45781,-22.54812c1.05264,-1.57896 3.18791,-2.00326 4.77031,-0.95406c1.57896,1.0492 2.00326,3.18791 0.95406,4.77031c-0.06536,0.09632 -6.30219,9.61244 -6.30219,18.73187c0,9.57696 2.66637,16.91824 6.14765,23.20656c1.54112,-1.8232 3.13782,-3.61485 4.85094,-5.32797c10.58144,-10.58144 23.52197,-18.13176 37.15469,-21.95016c-9.10224,-20.25816 -25.8373,-33.76844 -42.87906,-33.76844zM124.8411,48.20703c-3.56927,-0.1556 -7.29495,0.03983 -11.12625,0.59797c-15.62104,2.26696 -30.82692,10.11301 -42.81188,22.09797c-24.6476,24.65104 -30.37348,62.17058 -12.255,80.28906c6.83184,6.83528 17.02273,10.49469 28.74281,10.49469c2.82768,0 5.75533,-0.21828 8.73437,-0.65172c15.62104,-2.26696 30.8202,-10.11301 42.80516,-22.09797c24.65104,-24.65104 30.3802,-62.17058 12.26172,-80.28906c-6.36228,-6.36228 -15.64313,-9.97412 -26.35094,-10.44094zM141.04,68.86047c1.90232,0 3.44,1.54112 3.44,3.44c0,13.12704 -10.08006,29.56492 -38.3775,36.34172c-30.34768,7.2584 -30.3486,23.61205 -30.3486,32.39781c0,1.89888 -1.53768,3.44 -3.44,3.44c-1.90232,0 -3.44,-1.54112 -3.44,-3.44c0,-9.14696 0.00145,-30.55865 35.62953,-39.08297c24.40336,-5.84456 33.09656,-19.15424 33.09656,-29.65656c0,-1.89888 1.53768,-3.44 3.44,-3.44z"></path></g></g></svg>
+                        </div>
+                        <div class="desc">
+                            <h2> Add cream, keep your coffee warm</h2>
+                            <p>
+                                Coffee stays warm 20% longer when you add cream.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="moveToHow">
+                    <h2 class="recip_h2">How to Make the Perfect Cup of Coffee</h2>
+                </div>
+                <div id="how">
+
+                    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/gK_qiu9W7TU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+
+
+                <div id="moveToRecipes">
+                    <h2 class="recip_h2">Popular Recipes</h2>
+                </div>
+                <div id="recipes">
+
+                    <div class="recipe" id="caramelLatte">
+                        <div class="recipeName rec">Caramel Latte</div>
+
+                        <div class="discription">
+                            <div class="imgRecipe">
+                                <img src="https://www.smuckersrms.com/PhotoImage.ashx?photoid=9769&w=400&h=400" />
+                            </div>
+                            <h2>Prep time: 15 min</h2>
+
+                            <ul>
+                                <h3>Ingredients</h3>
+                                <li>1/2 cup milk</li>
+                                <li>3 to 4 tablespoons caramel flavored syrup</li>
+                                <li>1/4 cup strong brewed French Roast Coffee OR 1/4 cup strong brewed Black Silk Coffee</li>
+                                <li>Whipped cream</li>
+                                <li>
+                                    Caramel Flavored Syrup, for garnish
+                                    Baking toffee bits, for garnish
+                                </li>
+
+                            </ul>
+                            <ol>
+                                <h3>Derections</h3>
+                                <li>MICROWAVE milk in 1-quart microwave-safe bowl on HIGH 1 to 1 1/2 minutes or until hot but not boiling. Whisk until foamy</li>
+                                <li> MICROWAVE caramel syrup in microwave-safe coffee cup on HIGH 20 seconds. Stir in coffee.</li>
+                                <li> ADD milk. Top with whipped cream. Drizzle with caramel sundae syrup. Sprinkle with toffee bits. Serve immediately.</li>
+
+
+                            </ol>
+                        </div>
+                        <button class="btn"><a class="nav-link" href="https://www.folgerscoffee.com/coffee-recipes/coffee-drink-recipes/caramel-latte" target="_blank">read more</a></button>
+                    </div>
+
+
+                    <div class="recipe" id="icedVanillaLatte">
+                        <div class="recipeName rec">Iced Vanilla Latte</div>
+                        <div class="discription">
+                            <div class="imgRecipe">
+                                <img src="https://www.smuckersrms.com/PhotoImage.ashx?photoid=4598&w=400&h=400" />
+                            </div>
+                            <h2>Prep time: 12 min</h2>
+
+                            <ul>
+                                <h3>Ingredients</h3>
+                                <li>1 cup strong brewed French Vanilla Flavored Coffee, cooled to room temperature</li>
+                                <li>1 (12 fl. oz.) can Evaporated Milk, chilled</li>
+                                <li>1/3 cup sugar</li>
+                                <li>Ice cubes</li>
+
+                            </ul>
+                            <ol>
+                                <h3>Derections</h3>
+                                <li>COMBINE coffee, evaporated milk and sugar in blender container. Blend until smooth. Pour over ice in glasses. Serve immediately.</li>
+
+                            </ol>
+                        </div>
+                        <button class="btn"><a class="nav-link" href="https://www.folgerscoffee.com/coffee-recipes/coffee-drink-recipes/iced-vanilla-latte" target="_blank">read more</a></button>
+                    </div>
+
+                    <div class="recipe" id="brazilianCoffee">
+                        <div class="recipeName rec">Brazilian Coffee</div>
+                        <div class="discription">
+                            <div class="imgRecipe">
+                                <img src="https://www.smuckersrms.com/PhotoImage.ashx?photoid=9136&w=400&h=400" />
+                            </div>
+                            <h2>Prep time: 10 min</h2>
+
+                            <ul>
+                                <h3>Ingredients</h3>
+                                <li>1/3 cup unsweetened cocoa</li>
+                                <li>1/4 teaspoon salt</li>
+                                <li>1 teaspoon ground cinnamon</li>
+                                <li>1 (14 oz.) can Eagle Brand® Sweetened Condensed Milk</li>
+                                <li>5 cups water</li>
+
+                                <li>1 1/3 cups strong brewed Folgers Classic Roast® Coffee</li>
+
+                            </ul>
+                            <ol>
+                                <h3>Derections</h3>
+                                <li>COMBINE cocoa, salt and cinnamon in 3-quart saucepan. Add sweetened condensed milk; mix well.</li>
+                                <li>SLOWLY stir in water and coffee over medium heat; heat thoroughly but do not boil. Serve warm.</li>
+                                <li>Brazilian coffee may be stored in refrigerator up to 5 days. Mix well and reheat before serving.</li>
+
+                            </ol>
+
+
+                        </div>
+                        <button class="btn"><a class="nav-link" href="https://www.folgerscoffee.com/coffee-recipes/coffee-drink-recipes/brazilian-coffee" target="_blank">read more</a></button>
+                    </div>
+
+                    <div class="recipe" id="hotMochaSipper">
+                        <div class="recipeName rec">Hot Mocha Sipper</div>
+                        <div class="discription">
+                            <div class="imgRecipe">
+                                <img src="https://www.smuckersrms.com/PhotoImage.ashx?photoid=10120&w=400&h=400" />
+                            </div>
+                            <h2>Prep time: 5 min</h2>
+
+                            <ul>
+                                <h3>Ingredients</h3>
+                                <li>3 tablespoons Raspberry Syrup</li>
+                                <li>1 tablespoon Chocolate Flavored Syrup</li>
+                                <li>1/2 cup milk</li>
+                                <li>1/2 cup strong brewed Classic Roast Coffee</li>
+                                <li>
+                                    COMBINE syrups in large microwave-safe mug. Stir in milk and coffee.
+                                </li>
+
+                            </ul>
+                            <ol>
+                                <h3>Derections</h3>
+                                <li>COMBINE coffee, evaporated milk and sugar in blender container. Blend until smooth. Pour over ice in glasses. Serve immediately.</li>
+                                <li>MICROWAVE on HIGH for 1 minute or until hot.</li>
+                                <li>GARNISH as desired.</li>
+
+                            </ol>
+
+                        </div>
+                        <button class="btn"><a class="nav-link" href="https://www.folgerscoffee.com/coffee-recipes/coffee-drink-recipes/hot-mocha-sipper" target="_blank">read more</a></button>
+                    </div>
+
+                    <div class="recipe" id="coffeeEggnog">
+                        <div class="recipeName rec">Coffee Eggnog</div>
+                        <div class="discription">
+                            <div class="imgRecipe">
+                                <img src="https://www.smuckersrms.com/PhotoImage.ashx?photoid=10991&w=400&h=400" />
+                            </div>
+                            <h2>Prep time: 10 min</h2>
+
+                            <ul>
+                                <h3>Ingredients</h3>
+                                <li>2 tablespoons Classic Roast Instant Coffee crystals</li>
+                                <li>1/4 teaspoon ground cinnamon</li>
+                                <li>1/3 cup hot water</li>
+                                <li>2 (1-quart) containers eggnog, well chilled</li>
+
+                            </ul>
+                            <ol>
+                                <h3>Derections</h3>
+                                <li>COMBINE coffee crystals, cinnamon and water in 2-quart pitcher. Stir in eggnog.</li>
+                                <li>SERVE in small cups. Garnish as desired.</li>
+
+                            </ol>
+                        </div>
+                        <button class="btn"><a class="nav-link" href="https://www.folgerscoffee.com/coffee-recipes/coffee-drink-recipes/coffee-eggnog-punch" target="_blank">read more</a></button>
+                    </div>
+
+                </div>
+
+                <div id="share">
+                    <h2>Like this page? Share it with your friends</h2>
+                    <form id="form" action="https://www.freecodecamp.com/email-submit">
+                        <input name="email" id="email" type="email" placeholder="Enter your friend email address" required=""
+                               pattern="^{a-zA-Z}@{a-zA-Z}.{a-z}$" onchange="this.setCustomValidity(this.validity.patternMismatch ?
+                       'Must have at least 6 characters' : ''); if (this.checkValidity()) form.password_two.pattern = this.value;">
+                        <input id="submit" type="submit" value="send" class="btn">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <div class="footerDiv"><a href="#">Privacy</a></div>
+            <div class="footerDiv"><a href="#">Contact</a></div>
+
+            <div id="copyright">Copyright 2019, Coffee&&Code</div>
+        </div>
+    </footer>
+
+</body>
+</html>
