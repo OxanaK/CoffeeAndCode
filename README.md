@@ -2,7 +2,7 @@
 
 designing and developing a web application for different screen sizes
 
-Try it! ----> OxanaK.github.io/CoffeeAndCode/HtmlPage1.html
+Try it! ---->  https://oxanak.github.io/CoffeeAndCode/HtmlPage1.html
 
 ## Technology:
 HTML, CSS
