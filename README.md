@@ -1,4 +1,4 @@
-# CoffeeAndCode
+# Coffee && Code
 
 designing and developing a web application for different screen sizes
 
